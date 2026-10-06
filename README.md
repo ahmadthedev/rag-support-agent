@@ -2,15 +2,13 @@
 
 A support-chat system that answers questions from a local knowledge base of Markdown files. It uses an **agentic RAG** setup built with LlamaIndex, served through a **FastAPI** backend, with a **React + TypeScript** chat UI.
 
-Built while following the Hugging Face Agents Course, Unit 2.2 (LlamaIndex), section "Creating RAG Agents with QueryEngineTools".
-
 ![Support Agent](./support-agent.png)
 
 ---
 
 ## What it does
 
-- Indexes 30+ local `.md` files from `knowledge/` into a vector index.
+- Indexes local `.md` files from `knowledge/` into a vector index.
 - Wraps the index's query engine as a **`QueryEngineTool`** so an agent can decide when to search it.
 - Exposes the agent over a REST API with **per-session conversation memory**.
 - Provides a chat UI with markdown answers, source file chips, suggested questions, and a "New chat" button.
